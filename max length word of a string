@@ -1,0 +1,18 @@
+import java.util.Comparator;
+import java.util.Arrays;
+public class FindMaxWord {
+ 
+ public static void main(String args[]) {
+     String sentence="Java Stream make the functional  programming  easy and very powerful";
+     
+     String firstLongestWord=Arrays.stream(sentence.split(" "))
+            .max(Comparator.comparingInt(String::length))
+            .orElse("Not found any word");
+            
+     System.out.println("max length word "+firstLongestWord);        
+            
+     
+ }   
+}
+
+
